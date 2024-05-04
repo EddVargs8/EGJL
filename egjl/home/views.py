@@ -8,7 +8,7 @@ from home import models
 class Index(generic.View):
     template_name = "index.html"
 
-    usuarios = User.objects.all()
+    usuarios = models.User.objects.all()
 
     def get(self, request):
         context = {"usuarios": self.usuarios}
